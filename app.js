@@ -3,7 +3,7 @@ const cors = require("cors")
 const app = express()
 app.use(cors())
 
-const characters = [{
+const names = [{
     id: 1,
     firstName: "Alice",
     lastName: "Zephyr",
