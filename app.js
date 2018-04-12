@@ -30,7 +30,6 @@ const names = [{
     homeTown: "Wichita"
 }];
 
-// commenting so I can re-upload to heroku
 
 function getID(names, id) {
     for (let i = 0; i < names.length; i++) {
