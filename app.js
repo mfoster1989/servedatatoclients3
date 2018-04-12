@@ -46,7 +46,7 @@ app.get("/", function(request, response) {
 
 app.get("/:id", function (request, response) {
     var name = getID(names, request.params.id)
-    if (!charID) {
+    if (!getID) {
         response.status(404)
         response.json({error: {message: "No name found with that ID"}})
     }
