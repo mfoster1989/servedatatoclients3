@@ -45,11 +45,15 @@ app.get("/", function(request, response) {
 
 app.get("/:id", function (request, response) {
     var name = getID(names, request.params.id)
-    if (!getID) {
-        response.status(404)
-        response.json({error: {message: "No name found with that ID"}})
-    }
-    response.json(name)   
+    if (!name) {
+        response.status(404).json({
+            error: {
+                message: "No name found with that ID"
+            }
+        })
+    } else {
+    response.json({names: name})
+    }   
 })
 
 app.listen(process.env.PORT || 3000)
