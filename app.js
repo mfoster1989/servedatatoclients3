@@ -3,7 +3,9 @@ const cors = require("cors")
 const app = express()
 app.use(cors())
 
-const names = [{
+const names = [
+
+    {
     id: 1,
     firstName: "Alice",
     lastName: "Zephyr",
@@ -40,7 +42,7 @@ function getID(names, id) {
 }
 
 app.get("/", function(request, response) {
-    response.json(names)
+    response.json({names})
 });
 
 app.get("/:id", function (request, response) {
